@@ -1,0 +1,22 @@
+.input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+
+  &.primary {
+    border-color: #007bff;
+
+    &:focus {
+      border-color: #0056b3;
+    }
+  }
+
+  &.secondary {
+    border-color: #6c757d;
+
+    &:focus {
+      border-color: #565e64;
+    }
+  }
+}

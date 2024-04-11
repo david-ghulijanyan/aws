@@ -1,0 +1,15 @@
+type Mutation {
+  signUp(username: String!, email: String!, password: String!, firstName: String!, lastName: String!): AuthPayload
+  signIn(username: String!, password: String!): AuthPayload
+  signOut(accessToken: String!): Message
+}
+
+type AuthPayload {
+  accessToken: String
+  idToken: String
+  refreshToken: String
+}
+
+type Message {
+  message: String!
+}

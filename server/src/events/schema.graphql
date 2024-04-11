@@ -1,0 +1,27 @@
+type Query {
+  getEvents(limit: Int, lastEvaluatedKey: String, filter: EventFilter): EventPage
+  getEvent(eventId: String!): Event
+}
+
+type Mutation {
+  createEvent(eventName: String!, description: String!, date: String!): Event
+  updateEvent(eventId: String!, eventName: String!, description: String!, date: String!): Event
+  deleteEvent(eventId: String!): String
+}
+
+type Event {
+  eventId: String!
+  eventName: String!
+  description: String!
+  date: String!
+}
+
+type EventPage {
+  items: [Event]
+  lastEvaluatedKey: String
+}
+
+input EventFilter {
+  name: String
+  date: String
+}
